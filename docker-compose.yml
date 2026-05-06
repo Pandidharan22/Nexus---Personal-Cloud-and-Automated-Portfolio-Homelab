@@ -38,5 +38,12 @@ services:
     depends_on:
       - app
 
+  portfolio:
+    image: nginx:alpine
+    container_name: nginx_portfolio
+    restart: always
+    volumes:
+      - ./portfolio-data:/usr/share/nginx/html
+
 volumes:
   db_data:
