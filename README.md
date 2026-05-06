@@ -1,1 +1,1 @@
-# Nexus---Personal-Cloud-Automated-Portfolio-Homelab
+# Nexus - Personal Cloud and Automated Portfolio Homelab
