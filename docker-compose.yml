@@ -28,5 +28,15 @@ services:
     depends_on:
       - db
 
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: nexus_tunnel
+    restart: always
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}
+    depends_on:
+      - app
+
 volumes:
   db_data:
